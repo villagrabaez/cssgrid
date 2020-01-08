@@ -1,0 +1,60 @@
+/* fundamentos de css grid */
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 20px;
+  grid-template-areas: "header      header      header"
+                       "sidebar-1   contenido   sidebar-2"
+                       "sidebar-1   widgets     sidebar-2"
+                       "footer      footer      footer";
+}
+
+.main .header {
+  background: #ff8000;
+  /* grid-column: header / header;
+  grid-row: header / header; */
+  grid-area: header;
+}
+
+.main .sidebar-1 {
+  background: #393e46;
+  /* grid-column: sidebar-1 / sidebar-1;
+  grid-row: sidebar-1 / sidebar-1; */
+  grid-area: sidebar-1;
+}
+
+.main .contenido {
+  background: slateblue;
+  /* grid-column: contenido / contenido;
+  grid-row: contenido / contenido; */
+  grid-area: contenido;
+}
+
+.main .widgets {
+  background: yellowgreen;
+  /* grid-column: widgets / widgets;
+  grid-row: widgets / widgets; */
+  grid-area: widgets;
+}
+
+.main .sidebar-2 {
+  background: pink;
+  /* grid-column: sidebar-2 / sidebar-2;
+  grid-row: sidebar-2 / sidebar-2; */
+  grid-area: sidebar-2;
+}
+
+.main .footer {
+  background: saddlebrown;
+  /* grid-column: footer / footer;
+  grid-row: footer / footer; */
+  grid-area: footer;
+}
+
+.main > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -1,0 +1,23 @@
+/* fundamentos de css grid */
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-gap: 20px;
+
+  /* alineacion vertical */
+  align-items: center;
+  /* alineacion horizontal */
+  justify-items: center;
+}
+
+.main .item {
+  background: #ff8000;
+  align-self: stretch;
+  justify-self: stretch;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

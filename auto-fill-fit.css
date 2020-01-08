@@ -1,0 +1,9 @@
+/* fundamentos de css grid */
+.main {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: 150px 180px;
+  grid-gap: 20px;
+}
+
