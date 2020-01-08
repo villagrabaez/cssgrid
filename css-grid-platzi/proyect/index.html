@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Definiendo Contenido</title>
+  </head>
+  <style>
+    body{
+      font-family: sans-serif;
+    }
+    .container{
+      display: grid;
+      grid-template: 100px 1fr 150px / 35% 65%;
+      grid-gap: 10px;
+      height: 100vh;
+      grid-template-areas: "header header" "left contenido" "footer footer";
+    }
+    .item{
+      border: 1px solid red;
+      border-radius: 20px;
+      font-size: 30px;
+      /*Implementando Flex dentro de Grid*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /*  */
+    .header{
+      background: peru;
+      grid-area: header;
+    }
+    .left{
+      background: #eaeaea;
+      grid-area: left;
+    }
+    .contenido{
+      background: orange;
+      grid-area: contenido;
+    }
+    .footer{
+      background: gray;
+      grid-area: footer;
+    }
+  </style>
+  <body>
+    <section class="container">
+      <div class="item header">HEADER</div>
+      <div class="item left">LEFT</div>
+      <div class="item contenido">CONTENIDO</div>
+      <div class="item footer">FOOTER</div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+body{
+	font-family: arial;
+	margin: 0;
+}
+.post-list{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(100px, 293px));
+	grid-gap: 28px;
+	justify-content: center;
+}
+.post{
+	/* Ponemos la manito cada que pasamos el cursor */
+	cursor: pointer;
+	position: relative;
+	display: block;
+}
+.post-image{
+	margin: 0;
+}
+.post-image img{
+	width: 100%;
+	vertical-align: top;
+}
+.post-overlay{
+	background: rgba(0,0,0,.4);
+	color: white;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	display: none;
+	text-align: center;
+	/* propiedades de flex */
+	align-items: center;
+	justify-content: center;
+}
+.post:hover .post-overlay{
+	display: flex;
+}
+.post-likes, .post-comments{
+	margin: 5px;
+	width: 80px;
+	font-weight: bold;
+	text-align: center;
+	display: inline-block;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px){
+	.post-list{
+		grid-gap: 3px;
+	}
+}

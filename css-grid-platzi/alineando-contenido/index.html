@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Alinear contenido con CSS-GRID</title>
+</head>
+<!-- Estilos CSS -->
+<style>
+	body{
+		margin: 3px;
+	}
+	.container{
+		display: grid;
+		grid-template-columns: repeat(3, 200px);
+		grid-template-rows: repeat(4, 100px);
+		grid-gap: 3px;
+		height: 100vh;
+		
+		/*justify-items: start end center stretch;*/
+		/*align-items: start end center stretch;*/
+		/*justify-items: stretch;*/
+		/*align-items: stretch;*/
+		
+		/*justify-content | align-content: start end center stretch space-around space-between space-evenly;*/
+
+		justify-content: space-evenly;
+		align-content: space-between;
+	}
+	.item{
+		background: lightblue;
+		border: 1px solid red;
+		font-family: sans-serif;
+		font-size: 18px;
+		text-transform: uppercase;
+		/*Yo alineaba asi, tambien funciona jajaja*/
+		/*display: flex;
+		justify-content: center;
+		align-items: center;*/
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+</style>
+<body>
+	<section class="container">
+		<div class="item">item #1</div>
+		<div class="item">item #2</div>
+		<div class="item">item #3</div>
+		<div class="item">item #4</div>
+		<div class="item">item #5</div>
+		<div class="item">item #6</div>
+		<div class="item">item #7</div>
+		<div class="item">item #8</div>
+		<div class="item">item #9</div>
+	</section>
+</body>
+</html>
